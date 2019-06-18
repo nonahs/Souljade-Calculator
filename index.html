@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="souljade.css" />
+    <script src="souljade.js"></script>
+
+    <title>Souljade Calculator</title>
+  </head>
+  <body>
+        <div class="container mt-3 pl-3 content">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="alert bg-dark px-2">
+                        <h5 style="color:white;">Battle of the Immortals Souljade Calculator</h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="card w-auto">
+                        <div class="card-header bg-dark" style="color:white;">Souljade Details</div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                        <label for="initialLevel">Initial Level (0-14)</label>
+                                        <input type="text" id="initLevel" class="form-control mx-sm-3" min="1" max="15" value="0">
+                                </div>
+                                <div class="form-group">
+                                        <label for="desiredLevel">Desired Level (1-15)</label>
+                                        <input type="text" id="desiredLevel" class="form-control mx-sm-3" value="15">
+                                </div>
+                                <div class="form-group">
+                                        <label for="sjCost">Aura of Souljade Cost</label>
+                                        <input type="text" id="sjCost" class="form-control mx-sm-3" value="3000">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" id="calcButton" class="btn btn-success btn-block" onClick="calcData()">Calculate</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="card w-auto h-100">
+                        <div class="card-header bg-dark" style="color:white;">Souljade Cost</div>
+                        <div class="card-body">
+                            <div class="row">
+                                    <p class="card-text text-lg-right col-md-5">Auras Required</p>
+                                    <p id="sjAmount">0</p>
+                                </div>
+                            <div class="row">
+                                <p class="card-text text-lg-right col-md-5">Cost of Auras</p>
+                                <p id="totalSjCost">0</p>
+                            </div>
+                            <div class="row">
+                                    <p class="card-text text-lg-right col-md-5">Cost to Upgrade</p>
+                                    <p id="upgradeCost"">0</p>
+                            </div>
+                            <div class="row">
+                                    <p class="card-text text-lg-right col-md-5">Total Cost</p>
+                                    <p id="totalCost">0</p>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            
+            <div class="row">
+                <div class="col-sm-12">
+                        <div class="card w-auto">
+                            <div class="card-header bg-dark text-lg-center" style="color:white;">Souljade Stats</div>
+                            <div class="card-body">
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Level</p>
+                                        <p id="statsLevel">1</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Physical Attack Boost</p>
+                                        <p id="statsAttack">1-15</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Magic Attack Boost</p>
+                                        <p id="statsMagic"">10</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Accuracy & Evasion Bonus</p>
+                                        <p id="statsAcc">0</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Attack Rate Increase</p>
+                                        <p id="statsAttackSpeed">0%</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Movement Speed Increase</p>
+                                        <p id="statsMoveSpeed">0%</p>
+                                </div>
+                                <div class="row">
+                                        <p class="card-text text-lg-right col-md-5">Critical Strike Chance Increase</p>
+                                        <p id="statsCrit">0%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        
+        <br>
+  </body>
+</html>
